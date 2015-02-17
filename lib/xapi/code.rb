@@ -16,7 +16,7 @@ module Xapi
 
     def files
       paths.each_with_object({}) {|path, files|
-        files[basename(path)] = File.read(path)
+        files[basename(path)] = File.read(path).force_encoding("UTF-8")
       }
     end
 
