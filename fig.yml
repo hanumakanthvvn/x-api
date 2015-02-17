@@ -18,6 +18,8 @@ web:
 
 xapi:
   build: .
+  links:
+    - web
   command: foreman start
   ports:
     - "9292:9292"
