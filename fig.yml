@@ -1,28 +1,8 @@
-db:
-  build: ../exercism.io/db
-  environment:
-    POSTGRES_USER: exercism
-    POSTGRES_PASSWORD: apples
-
-web:
-  build: ../exercism.io
-  links:
-    - db
-  command: foreman start
-  ports:
-    - "4567:4567"
-  environment:
-    EXERCISM_GITHUB_CLIENT_ID: dcfff8e9b61cc9263677
-    EXERCISM_GITHUB_CLIENT_SECRET: f6d76ee9c4ec3b00b128f1fd92727ddeffed95a9
-    PORT: 4567
-
 xapi:
   build: .
-  links:
-    - web
   command: foreman start
   ports:
-    - "9292:9292"
-    - "9393:9393"
+    - "8080:9292"
   environment:
+    RACK_ENV: 'production'
     PORT: 9292

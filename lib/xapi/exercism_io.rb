@@ -12,7 +12,7 @@ module Xapi
 
     def self.url
       if env == 'production'
-        'http://exercism.io'
+        'http://52.10.82.212'
       else
         'http://localhost:4567'
       end
