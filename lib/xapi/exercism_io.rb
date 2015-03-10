@@ -14,7 +14,7 @@ module Xapi
       if env == 'production'
         'http://exercism.io'
       else
-        'http://web:4567'
+        'http://localhost:4567'
       end
     end
 

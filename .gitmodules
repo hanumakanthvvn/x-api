@@ -1,3 +1,6 @@
 [submodule "problems/java"]
 	path = problems/java
 	url = git@github.com:hanumakanthvvn/x-java.git
+[submodule "metadata"]
+	path = metadata
+	url = git@github.com:hanumakanthvvn/x-meta.git
