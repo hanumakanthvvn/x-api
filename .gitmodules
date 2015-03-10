@@ -1,0 +1,3 @@
+[submodule "problems/java"]
+	path = problems/java
+	url = git@github.com:hanumakanthvvn/x-java.git
