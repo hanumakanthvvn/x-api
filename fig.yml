@@ -2,9 +2,9 @@ xapi:
   image: exercism-api
   command: foreman start
   volumes:
-    - ".:/exercism"
+    - ".:/x-api"
   ports:
     - "8080:9292"
   environment:
-    RACK_ENV: 'production'
+    RACK_ENV: production
     PORT: 9292
