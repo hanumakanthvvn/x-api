@@ -12,4 +12,3 @@ RUN gem install foreman
 
 RUN bundle install --without development test
 
-ADD . /x-api
