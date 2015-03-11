@@ -4,3 +4,6 @@
 [submodule "metadata"]
 	path = metadata
 	url = git@github.com:hanumakanthvvn/x-meta.git
+[submodule "problems/node-js"]
+	path = problems/node-js
+	url = git@github.com:hanumakanthvvn/x-nodejs.git
