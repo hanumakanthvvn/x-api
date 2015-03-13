@@ -13,6 +13,8 @@ gem 'sinatra', '~> 1.4', require: 'sinatra/base'
 gem 'tilt', '~> 1.3'
 
 group :development, :test do
+  gem 'capistrano'
+  gem 'capistrano-git-submodule-strategy', '~> 0.1', :github => 'ekho/capistrano-git-submodule-strategy'
   gem 'approvals', '~> 0.0.16', require: false
   gem 'coveralls', '~> 0.7', require: false
   gem 'minitest', '~> 5.3', require: false
