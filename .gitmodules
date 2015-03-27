@@ -7,3 +7,6 @@
 [submodule "problems/node-js"]
 	path = problems/node-js
 	url = git@github.com:hanumakanthvvn/x-nodejs.git
+[submodule "problems/ruby"]
+	path = problems/ruby
+	url = git@github.com:hanumakanthvvn/x-ruby.git
