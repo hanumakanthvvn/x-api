@@ -16,10 +16,10 @@ module Xapi
         pg :problem, locals: { problem: problem }
       end
 
-      get '/problems/remote/update/all' do
+      get '/problems/fetch/git/submodules' do
         exec = system("cd /home/ubuntu/x-api && cap staging deploy:updating")
         if exec
-          "Assingments updated successfully"
+          "Assingments fetched successfully"
         else
           halt 404
         end
