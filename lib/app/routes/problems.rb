@@ -15,6 +15,11 @@ module Xapi
         problem.validate or halt 404, { error: problem.error }.to_json
         pg :problem, locals: { problem: problem }
       end
+
+      get '/problems/remote/update/all' do
+        exec = system("cd /home/ubuntu/x-api && cap staging deploy:updating")
+        exec ? "Assingments updated successfully" : halt 404
+      end
     end
   end
 end
