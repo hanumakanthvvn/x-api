@@ -18,7 +18,11 @@ module Xapi
 
       get '/problems/remote/update/all' do
         exec = system("cd /home/ubuntu/x-api && cap staging deploy:updating")
-        exec ? "Assingments updated successfully" : halt 404
+        if exec
+          "Assingments updated successfully"
+        else
+          halt 404
+        end
       end
     end
   end
