@@ -1,31 +1,11 @@
-# xapi:
-#   image: exercism-api
-#   command: foreman start
-#   volumes:
-#     - ".:/x-api"
-#   ports:
-#     - "80:9292"
-#   environment:
-#     RACK_ENV: production
-#     PORT: 9292
-
-web:
-  build: ../../../exercism.io/current
-  command: foreman start
-  ports:
-    - "4567:4567"
-  environment:
-    EXERCISM_GITHUB_CLIENT_ID: EXERCISM_GITHUB_CLIENT_ID
-    EXERCISM_GITHUB_CLIENT_SECRET: EXERCISM_GITHUB_CLIENT_SECRET
-    PORT: 4567
-
 xapi:
-  build: .
-  links:
-    - web
+  image: exercism-api
   command: foreman start
+  volumes:
+    - ".:/x-api"
   ports:
     - "9292:9292"
-    - "9393:9393"
   environment:
+    RACK_ENV: production
     PORT: 9292
+
