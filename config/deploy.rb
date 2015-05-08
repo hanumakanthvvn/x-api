@@ -5,10 +5,10 @@ set :application, "exercism-api"
 set :repo_url, "git@github.com:hanumakanthvvn/x-api.git"
 
 # Default branch is :master
-set :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
+set :branch, "qa-branch" # proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/u/apps/exercism/x-api"
+set :deploy_to, "/home/pramati/projects/exercism/x-api"
 
 # Default value for :scm is :git
 set :scm, :git
@@ -40,8 +40,8 @@ namespace :deploy do
     on roles(:app), in: :sequence, wait: 5 do
       # we dont need to add this build step on every deploy
       # only run build when something changed in Gemfile or Dockerfile
-       execute "cd '#{release_path}'; docker build -t exercism-api ."
-       execute "cd '#{release_path}'; fig -p exercism-api up -d"
+       # execute "cd '#{release_path}'; docker build -t exercism-api ."
+       # execute "cd '#{release_path}'; fig -p exercism-api up -d"
     end
   end
 
