@@ -17,7 +17,7 @@ module Xapi
       end
 
       get '/problems/fetch/git/submodules' do
-        exec = system("cd /home/ubuntu/x-api && cap staging deploy:updating")
+        exec = system("cd ~/x-api && cap staging deploy:updating")
         if exec
           "Assingments fetched successfully"
         else
