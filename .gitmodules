@@ -10,3 +10,6 @@
 [submodule "problems/ruby"]
 	path = problems/ruby
 	url = git@github.com:hanumakanthvvn/x-ruby.git
+[submodule "problems/javascript"]
+	path = problems/javascript
+	url = git@github.com:hanumakanthvvn/x-javascript.git
